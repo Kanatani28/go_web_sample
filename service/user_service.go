@@ -32,10 +32,8 @@ func (s Service) CreateModel(c *gin.Context) (User, error) {
 	db := db.GetDB()
 	var u User
 
-	log.Println("AAAAAAAAAAAA")
 	if err := c.BindJSON(&u); err != nil {
-		log.Println("vvvvvv")
-		log.Println(err)
+		log.Println("vvvvvv")		log.Println(err)
 		return u, err
 	}
 
@@ -45,7 +43,6 @@ func (s Service) CreateModel(c *gin.Context) (User, error) {
 		return u, err
 	}
 
-	log.Println("AAAAAAAAAAAA")
 	log.Println(u)
 	return u, nil
 }
